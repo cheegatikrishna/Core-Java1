@@ -1,0 +1,33 @@
+import java.util.*;
+class HighestPrime 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int s=sc.nextInt();
+		int c=0;
+		for(int i=s;i>=n;i--)
+		{
+			if(Prime(i))
+			{
+				//c++;
+				System.out.println("the Highest prime number is: "+i);
+				break;
+			}
+		}
+
+	}
+	public static boolean Prime(int m)
+	{
+		if(m<2)
+			return false;
+		else
+			for(int i=2;i<=m/2;i++)
+			{
+				if(m%i==0)
+					return false;
+			}
+			return true;
+	}
+}
